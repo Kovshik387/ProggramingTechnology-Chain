@@ -16,7 +16,7 @@ public class LenghtMiddleWare extends Middleware {
     @Override
     public boolean check(String password, VBox box) {
         var text = new Text();
-        if (password.length() <= max && password.length() >= min){
+        if (!(password.length() <= max && password.length() >= min)){
             text.setText("Длина пароля должна быть от " + min + " до " + max);
             text.setFill(Color.RED);
             box.getChildren().add(text);

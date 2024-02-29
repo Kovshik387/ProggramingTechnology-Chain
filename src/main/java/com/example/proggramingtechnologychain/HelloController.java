@@ -1,12 +1,11 @@
 package com.example.proggramingtechnologychain;
 
 import infrastructure.Middleware;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import model.Password;
 import service.DigitMiddleWare;
@@ -27,7 +26,7 @@ public class HelloController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }
 
-    public void checkButtonAction(ActionEvent event) {
+    public void checkButtonAction(KeyEvent event) {
         password = new Password(checkPasswordBox,fieldText.getText());
 
         checkPasswordBox.getChildren().clear();

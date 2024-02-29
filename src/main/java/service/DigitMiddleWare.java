@@ -16,14 +16,14 @@ public class DigitMiddleWare extends Middleware {
     public boolean check(String password, VBox box) {
         var text = new Text();
         if (checkDigit(password)){
-            text.setText("В пароле должно содержится" + countNum + " цифр");
+            text.setText("В пароле должно содержится " + countNum + " цифр");
             text.setFill(Color.GREEN);
 
             box.getChildren().add(text);
 
             return checkNext(password,box);
         }
-        text.setText("В пароле должно содержаться" + countNum + " цифр");
+        text.setText("В пароле должно содержаться " + countNum + " цифр");
         text.setFill(Color.RED);
         box.getChildren().add(text);
         return false;
